@@ -25,9 +25,9 @@ let baseURI = '/apps/' + config.HEROKU.APP_NAME;
         BGM_off = 'bgm සක්‍රීය කර ඇත'
     }
  else {
-        l_dsc = 'ස්ව්‍යංක්‍රීය voice පනිවිඩ යැවීම සක්‍රීය කිරීම හා අක්‍රීය කිරීම - බොට් හිමිකරුට පමණක් ක්‍රියා කරයි'
-        BGM_on = 'bgm අක්‍රීය කර ඇත!'
-        BGM_off = 'bgm සක්‍රීය කර ඇත'
+        l_dsc = 'turn on and turn of bgm. -bot owner command'
+        BGM_on = 'bgm option turned on!'
+        BGM_off = 'bgm option turned off'
     }
     MyPnky.addCommand({pattern: 'bgm ?(.*)', fromMe: true, desc: l_dsc, usage: '.bgm on / off' }, (async (message, match) => {
         if (match[1] == 'off') {
@@ -57,19 +57,13 @@ let baseURI = '/apps/' + config.HEROKU.APP_NAME;
     var THERI_offp = ''
    
 
-    if (config.LANG == 'EN') {
-        l_dss = 'to block/remove members if they use specified words given in THERI_LIST'        
-        THERI_on = 'ᴍᴇᴍʙᴇʀꜱ ᴡɪʟʟ ʙᴇ ʀᴇᴍᴏᴠᴇᴅ ɪꜰ ʙᴀᴅ ᴡᴏʀᴅꜱ ᴀʀᴇ ᴜꜱᴇᴅ'
-        THERI_off = 'ᴍᴇᴍʙᴇʀꜱ ᴡɪʟʟ ɴᴏᴛ ʙᴇ ʀᴇᴍᴏᴠᴇᴅ ɪꜰ ʙᴀᴅ ᴡᴏʀᴅꜱ ᴀʀᴇ ᴜꜱᴇᴅ'
-        THERI_onp = 'ᴜꜱᴇʀꜱ ᴡɪʟʟ ʙᴇ ʙʟᴏᴄᴋᴇᴅ ɪꜰ ɢɪᴠᴇɴ ʙᴀᴅ ᴡᴏʀᴅꜱ ᴀʀᴇ ᴜꜱᴇᴅ'
-        THERI_offp = 'ᴜꜱᴇʀꜱ ᴡɪʟʟ ɴᴏᴛ ʙᴇ ʙʟᴏᴄᴋᴇᴅ ɪꜰ ɢɪᴠᴇɴ ʙᴀᴅ ᴡᴏʀᴅꜱ ᴀʀᴇ ᴜꜱᴇᴅ'
-    }
     if (config.LANG == 'SI') {
         l_dss = 'THERI_LIST හි ඇති විශේශ වචන භාවිත කරන්නන් අවහිර කිරීමකට ලක්වේ.'
         THERI_on = 'සාමාජිකයන් ඉවත් කිරීමකට ලක්වේ'
         THERI_off = 'සාමාජිකයන් ඉවත් කිරීමකට ලක් නොවේ'
         THERI_onp = 'සාමාජිකයන් අවහිර කිරීමකට ලක් වේ'
         THERI_offp = 'සාමාජිකයන් අවහිර කිරීමකට ලක් නොවේ'
+    }
    else {
         l_dss = 'to block/remove members if they use specified words given in THERI_LIST'        
         THERI_on = 'ᴍᴇᴍʙᴇʀꜱ ᴡɪʟʟ ʙᴇ ʀᴇᴍᴏᴠᴇᴅ ɪꜰ ʙᴀᴅ ᴡᴏʀᴅꜱ ᴀʀᴇ ᴜꜱᴇᴅ'
@@ -114,23 +108,17 @@ let baseURI = '/apps/' + config.HEROKU.APP_NAME;
  var BGM_ONE = ''
  var BGM_TWO = ''
 
-    if (config.LANG == 'ML') {
+    if (config.LANG == 'SI') {
       
-      plk_desc = 'മറുപടി bgm മോഡ് മാറ്റാൻ'
-      BGM_ONE = '𝐁𝐆𝐌 തരം ഒന്നാം മോഡിലേക്ക് മാറ്റി'
-      BGM_TWO = '𝐁𝐆𝐌 തരം രണ്ടാം മോഡിലേക്ക് മാറ്റി'
-    }
-    if (config.LANG == 'EN') {  
-    plk_desc = 'change reply message BGM mode'
-    BGM_ONE = 'BGM type change to 1st  mode'
-    BGM_TWO = 'BGM type change to 2nd  mode'
-    }
-    if (config.LANG == 'SI') {  
         plk_desc = 'ස්වංක්‍රීය වචන පනිවිඩ ආකාරය වෙනස් වේ'
         BGM_ONE = 'BGM type change to 1st mode'
         BGM_TWO = 'BGM type change to 2nd mode'
-        }
-    
+    }
+    if (config.LANG == 'EN') {  
+    plk_desc = 'change reply message BGM mode'
+    BGM_ONE = '𝐁𝐆𝐌 𝐭𝐲𝐩𝐞 𝐜𝐡𝗮𝐧𝐠𝐞𝐝 𝐭𝐨 𝟭𝘀𝘁 𝐦𝐨𝐝𝐞'
+    BGM_TWO = '𝐁𝐆𝐌 𝐭𝐲𝐩𝐞 𝐜𝐡𝗮𝐧𝐠𝐞𝐝 𝐭𝐨 2nd 𝐦𝐨𝐝𝐞'
+    }
 
 
  MyPnky.addCommand({pattern: 'bgm ?(.*)', fromMe: true, desc: plk_desc, usage: '.bgm one / two' }, (async (message, match) => {
@@ -170,13 +158,6 @@ let baseURI = '/apps/' + config.HEROKU.APP_NAME;
         succ_on = 'Antilink Opened Successfully!'
         succ_off = 'Antilink Closed Successfully!'
     }
-    if (config.LANG == 'SI') {
-        l_dsc = 'Antilink සක්‍රීය කිරීම.'
-        alr_on = 'Antilink කලින්ම සක්‍රීයයි!'
-        alr_off = 'Antilink කලින්ම අක්‍රීයයි!'
-        succ_on = 'Antilink සක්‍රීය කිරීම සාර්තකයි'
-        succ_off = 'Antilink අක්‍රීය කිරීම සාර්තකයි!'
-    }
     if (config.LANG == 'AZ') {
         l_dsc = 'Antilink alətini aktivləşdirir.'
         alr_on = 'Antilink hazırda açıqdır!'
@@ -198,12 +179,12 @@ let baseURI = '/apps/' + config.HEROKU.APP_NAME;
         succ_on = 'ആന്റിലിങ്ക് വിജയകരമായി തുറന്നു!'
         succ_off = 'ആന്റിലിങ്ക് വിജയകരമായി അടച്ചു!'
     }
-    if (config.LANG == 'PT') {
-        l_dsc = 'Ativa a ferramenta Antilink.'
-        alr_on = 'O Antilink já está aberto!'
-        alr_off = 'Antilink está fechado no momento!'
-        succ_on = 'Antilink aberto com sucesso!'
-        succ_off = 'Antilink fechado com sucesso!'
+    if (config.LANG == 'SI') {
+        l_dsc = 'Antilink සක්‍රීය කිරීම.'
+        alr_on = 'Antilink කලින්ම සක්‍රීයයි!'
+        alr_off = 'Antilink කලින්ම අක්‍රීයයි!'
+        succ_on = 'Antilink සක්‍රීය කිරීම සාර්තකයි'
+        succ_off = 'Antilink අක්‍රීය කිරීම සාර්තකයි!'
     }
     if (config.LANG == 'RU') {
         l_dsc = 'Активирует инструмент Antilink.'
@@ -265,13 +246,6 @@ let baseURI = '/apps/' + config.HEROKU.APP_NAME;
         LINKT_on = '*M_LINK සක්‍රීයයි*'
         LINKT_off = '*M_LINK අක්‍රීයයි*'
     }
-    if (config.LANG == 'ML') {
-        l_dsc = '.antilink എല്ലാ ലിങ്കുകളും നിരോധിക്കുന്നില്ല, പക്ഷേ mlink ചെയ്യുന്നു'
-        alr_on = '!'
-        alr_off = '!'
-        LINKT_on = 'M_LINK TURNED ON'
-        LINKT_off = 'M_LINK TURNED Off'
-    }
    
     MyPnky.addCommand({pattern: 'mlink ?(.*)', fromMe: true, desc: l_dsc, usage: '.mlink on / of' }, (async (message, match) => {
         if (match[1] == 'off') {
@@ -296,18 +270,12 @@ let baseURI = '/apps/' + config.HEROKU.APP_NAME;
  var BGM_ONE = ''
  var BGM_TWO = ''
 
-    if (config.LANG == 'ML') {
+    if (config.LANG == 'SI') {
       
-      plk_desc = 'ഓട്ടോ സ്റ്റിക്കർ ഓണാക്കാനും ഓഫാക്കാനും'
-      BGM_ONE = 'ഓട്ടോ സ്റ്റിക്കർ ഓണാക്കി'
-      BGM_TWO = 'ഓട്ടോ സ്റ്റിക്കർ ഓഫാക്കി'
-    }
-    if (config.LANG == 'EN') {
-    
         plk_desc = 'ස්ව්‍යංක්‍රීය ස්ටිකර් පණිවිඩ සක්‍රීය කිරිම හා අක්‍රීය කිරීම'
         STR_ON = 'ස්ව්‍යංක්‍රීය ස්ටිකර් පනිවිඩ යැවීම සක්‍රීය කරන ලදී​'
         STR_OFF = 'ස්ව්‍යංක්‍රීය ස්ටිකර් පනිවිඩ යැවීම අක්‍රීය කරන ලදී​'
-        }
+    }
     if (config.LANG == 'EN') {
     
     plk_desc = 'to turn on and off auto sticker'
@@ -346,17 +314,10 @@ let baseURI = '/apps/' + config.HEROKU.APP_NAME;
     }
 
     if (config.LANG == 'SI') {
-    
+      
         W_ADM = 'ඇඩ්මින්වරු හට ක්‍රියාකරයි' 
         W_PUB = 'public ලෙස ක්‍රියා කරයි'
         W_PRI = 'private ලෙස ක්‍රියා කරයි'
-        }
-
-    if (config.LANG == 'ML') {
-      
-      W_ADM = 'ᴡᴏʀᴋ ᴛʏᴘᴇ ɪꜱ ᴀᴅᴍɪɴ ɴᴏᴡ'
-      W_PUB = 'ᴡᴏʀᴋ_ᴛʏᴘᴇ ɪꜱ ɴᴏᴡ ᴘᴜʙʟɪᴄ'
-      W_PRI = 'ᴡᴏʀᴋ_ᴛʏᴘᴇ ɪꜱ ɴᴏᴡ ᴘʀɪᴠᴀᴛᴇ'
     }
 
     MyPnky.addCommand({pattern: 'work ?(.*)', fromMe: true,dontAddCommandList: true, }, (async (message, match) => {
