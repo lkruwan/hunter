@@ -126,10 +126,10 @@ lusifar.addCommand({pattern: 'txtit$', fromMe: wk, desc: desc_msg}, (async (mess
     var usage_cmd = ''
     var command_cmd = ''
     var desc_cmd = ''
-    if (Config.LANG == 'TR' || Config.LANG == 'AZ') {
-        usage_cmd = '⌨️ *Örnek:* _'
-        command_cmd = '💻 *Komut:* '
-        desc_cmd = 'ℹ️ *Açıklama:* _'
+    if (Config.LANG == 'SI' || Config.LANG == 'AZ') {
+        usage_cmd = '*🔖 උදාහණ:* '
+        command_cmd = '❣️ *විධානය:* '
+        desc_cmd = '💝 *විස්තර:* '
     } else { 
         usage_cmd = '*🔖 Example:* '
         command_cmd = '❣️ *Command:* '

@@ -17,6 +17,7 @@ const SLang = Language.getString('webss');
 var LANG = { RES: '' }
 if (Config.LANG == 'TR') LANG.RES == '*Komut Bulunamadı!*\n*Benzer Komut:*'
 if (Config.LANG == 'EN') LANG.RES == '*Command not Found!*\n*Similar Command:*'
+if (Config.LANG == 'EN') LANG.RES == '*විදානය හමු නොවීය!*\n *සමාන විදාන:*'
 if (Config.LANG == 'AZ') LANG.RES == '*Komanda tapılmadı!*\n*Oxşar əmr:*'
 if (Config.LANG == 'PT') LANG.RES == '*Comando não encontrado!*\n*Comando Similar:*'
 if (Config.LANG == 'RU') LANG.RES == '*Команда не найдена!*\n*Аналогичная команда:*'

@@ -38,6 +38,8 @@ var plk = ''
 var plk2 = ''
 if (Config.LANG == 'EN') plk = 'sorry chatting in pm is not allowed'
 if (Config.LANG == 'EN') plk2 = '.block'
+if (Config.LANG == 'SI') plk = 'මේ චැට් කරන්න වෙලාවක් නෙමේ'
+if (Config.LANG == 'SI') plk2 = '.block'
 if (Config.LANG == 'ML') plk = 'ക്ഷമിക്കണം PM ൽ ചാറ്റിംഗ് അനുവദനീയമല്ല'
 if (Config.LANG == 'ML') plk2 = '.block'
 MyPnky.addCommand({on: 'text', fromMe: false, onlyPm: true , deleteCommand: false}, (async (message, match) => {

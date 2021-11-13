@@ -71,6 +71,15 @@ if (config.LANG == 'EN') {
     dlang_other = 'Other Languages'
     dlang_input = 'Processed Text:'
 }
+if (config.LANG == 'SI') {
+    dlang_dsc = 'පිළිතුරු දුන් පණිවිඩයේ භාශාව උපකල්පනය කරයි.'
+    closer_res = 'ආශ්‍රිතම ප්‍රතිඵලය:'
+    dlang_lang = 'භාශාව:'
+    dlang_similarity = 'සමානාත්මතාව:'
+    dlang_other = 'වෙනත් භාශා'
+    dlang_input = 'පණිවිඩය:'
+}
+
 if (config.LANG == 'AZ') {
     dlang_dsc = 'Cavablanan mesajın dilini təxmin edin.'
     closer_res = 'Ən yaxın nəticə:'
