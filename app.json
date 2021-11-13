@@ -51,7 +51,10 @@
             "required": false,
             "value": "Asia/Colombo"
         },
- 
+        "AUTO_REPLY": {	
+            "description": "send reply for somr massages",	
+            "required": true,	
+            "value": "true"	            
         
          "SONGD": {
             "description": "Customizable Song Download message",
