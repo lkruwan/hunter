@@ -53,7 +53,7 @@
         },
         "AUTO_REPLY": {	
             "description": "send reply for somr massages",	
-            "required": true,	
+            "required": false,	
             "value": "true"	            
         },
          "SONGD": {
