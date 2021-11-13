@@ -40,7 +40,7 @@ async function checkImAdmin(message, user = message.client.user.jid) {
 var autoreply_var = ''
 async function antlch() {
     await heroku.get(baseURI + '/config-vars').then(async (vars) => {
-        autoreply_var = vars.AUTOREP
+        autoreply_var = vars.AUTO_REPLY
     });
 }
 antlch()
