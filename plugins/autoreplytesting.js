@@ -1628,7 +1628,7 @@ lusifar.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (me
                 
         }      
         else if (regex303.test(message.message)) {
-                  await message.client.sendMessage(message.jid,SEw, MessageType.text, {quoted: message.data })      await message.client.sendMessage(message.jid,'\n    *3*', MessageType.text, {quoted: message.data })      await message.client.sendMessage(message.jid,'\n    *2*', MessageType.text, {quoted: message.data })      await message.client.sendMessage(message.jid,'\n    *1*', MessageType.text, {quoted: message.data })      await message.client.sendMessage(message.jid,'\n    *Bye, Bye!*', MessageType.text, {quoted: message.data })
+                  await message.client.sendMessage(message.jid,ldc, MessageType.text, {quoted: message.data })      
                 
         }      
         else if (regex303.test(message.message)) {
